@@ -22,7 +22,7 @@
 
   
 
-  <title>myblog | Hexo</title>
+  <title>axios使用 | Hexo</title>
 
   
 
@@ -96,11 +96,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">myblog</h1>
+          <h1 class="title-wrap">axios使用</h1>
           <h2 class="title-sub-wrap">
             <strong>Bin BK 我</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-10-14T02:08:59.000Z" itemprop="datePublished">2021-10-14</time>
+            <time  class="article-date" datetime="2021-10-19T09:43:11.000Z" itemprop="datePublished">2021-10-19</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -129,14 +129,14 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p><img src="/2021/10/14/myblog/yidian_116011362.jpg" alt="图片"></p>
-<img src="/2021/10/14/myblog/yidian_116011362.jpg" class title="This is an test image">
-
-<p><img src="/2021/10/14/myblog/yidian_116011362.jpg" alt="图片"></p>
-
-
-<p><img src="/2021/10/14/myblog/a.jpg" alt="图片"></p>
-<p><img src="/2021/10/14/myblog/a.jpg" alt="图片"></p>
+        <h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><h3 id="直接使用"><a href="#直接使用" class="headerlink" title="直接使用"></a>直接使用</h3><p>一、<br>安装 axios<br>npm install –save axios<br>二、<br>导入 axios<br>import axios from ‘axios’<br>三、<br>mounted(){<br>this.$axios.get(“网址”)<br>.then(res =&gt; {<br>console.log(res.data);<br>})<br>.catch(error =&gt;{<br>console.log(error);<br>})<br>}</p>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>一、<br>安装<br>二、使用到的文件<br>main.js<br>vue.config.js<br>app.vue<br>三、</p>
+<h5 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h5><p>import axios from ‘axios’</p>
+<p>Vue.prototype.$axios = axios;</p>
+<h4 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h4><p>module.exports = {<br>devServer: {<br>proxy: {<br>‘/te’: {<br>// 此处的写法，目的是为了 将 /api 替换成 <a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a><br>target: ‘<a target="_blank" rel="noopener" href="http://apis.juhe.cn&/#39;">http://apis.juhe.cn&#39;</a>,<br>// 允许跨域<br>changeOrigin: true,<br>ws: true,<br>pathRewrite: {<br>‘^/te’: ‘’<br>}<br>}<br>}<br>}<br>}</p>
+<h4 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h4><p>和上面一样，改前面的地址</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/l-y-h/p/11815452.html">跨域参考一</a><br><a target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845">中文文档</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.iwenwiki.com/">可以直接连接的网络接口</a></p>
 
       </section>
 
@@ -144,28 +144,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/10/14/hexo%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">hexo简单用法</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/10/13/Ondblog/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Ondblog</h2>
+        <a href="/2021/10/15/hexo%E7%AE%80%E5%8D%95%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">hexo简单的修改主题图片文字</h2>
         </a>
       
       <div class="card-text--row">Older</div>
